@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us – Adir Enterprises</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
-<style>
-  :root { --apple-blue: #0071e3; --apple-bright: #00ca4e; --navy: #0A1628; --navy-mid: #142236; --white: #ffffff; --grey: #a1a1a6; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--navy); color: var(--white); font-family: 'Barlow', sans-serif; padding-top: 100px; }
-  
-  nav { position: fixed; top: 0; width: 100%; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(10,22,40,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,113,227,0.2); }
-  .logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
-  .logo-icon { width: 42px; height: 42px; background: var(--apple-blue); clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 30%); display: flex; align-items: center; justify-content: center; }
-  .logo-icon svg { width: 22px; height: 22px; fill: var(--white); }
-  .logo-text { display: flex; flex-direction: column; line-height: 1; }
-  .logo-text span:first-child { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--white); letter-spacing: 2px; }
-  .logo-text span:last-child { font-size: 0.65rem; color: var(--apple-bright); letter-spacing: 3px; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a { color: var(--grey); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
-  .nav-links a.active { color: var(--apple-blue); font-weight: 700; }
-  .nav-cta { background: var(--apple-blue); border: none; color: var(--white); padding: 0.6rem 1.6rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; text-decoration: none; border-radius: 20px; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us – Adir Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --apple-blue: #0071e3; --apple-bright: #00ca4e; --navy: #0A1628; --navy-mid: #142236; --white: #ffffff; --grey: #a1a1a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--navy); color: var(--white); font-family: 'Barlow', sans-serif; padding-top: 100px; }
+        
+        nav { position: fixed; top: 0; width: 100%; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(10,22,40,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,113,227,0.2); }
+        .logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+        .logo-icon { width: 42px; height: 42px; background: var(--apple-blue); clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 30%); display: flex; align-items: center; justify-content: center; }
+        .logo-icon svg { width: 22px; height: 22px; fill: var(--white); }
+        .logo-text { display: flex; flex-direction: column; line-height: 1; }
+        .logo-text span:first-child { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--white); letter-spacing: 2px; }
+        .logo-text span:last-child { font-size: 0.65rem; color: var(--apple-bright); letter-spacing: 3px; text-transform: uppercase; }
+        
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--grey); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+        .nav-links a.active { color: var(--apple-blue); font-weight: bold; }
 
-  #contact { padding: 4rem; max-width: 600px; margin: 0 auto; }
-  .section-title { font-size: 3rem; font-weight: 700; margin-bottom: 2rem; text-align: center; }
-  .form-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
-  .form-group label { font-size: 0.75rem; text-transform: uppercase; color: var(--grey); letter-spacing: 1px; }
-  .form-group input, .form-group textarea { background: var(--navy-mid); border: 1px solid rgba(255,255,255,0.1); padding: 1rem; color: #fff; border-radius: 8px; outline: none; font-family: inherit; }
-  .form-group input:focus, .form-group textarea:focus { border-color: var(--apple-blue); }
-  .submit-btn { background: var(--apple-blue); color: white; padding: 1rem 2rem; border: none; border-radius: 20px; font-weight: 600; text-transform: uppercase; cursor: pointer; width: 100%; transition: background 0.2s; }
-  .submit-btn:hover { background: #0077ed; }
-  
-  @media (max-width: 900px) { nav { padding: 1rem 2rem; } .nav-links, .nav-cta { display: none; } #contact { padding: 2rem; } }
-</style>
+        .content { padding: 4rem; max-width: 600px; margin: 0 auto; text-align: center; }
+        h1 { font-size: 3rem; color: var(--apple-blue); margin-bottom: 1rem; }
+        p { color: var(--grey); font-size: 1.1rem; margin-bottom: 2rem; }
+        .contact-info { background: var(--navy-mid); padding: 2rem; border-radius: 12px; text-align: left; line-height: 1.8; }
+    </style>
 </head>
 <body>
 
@@ -43,32 +36,23 @@
     <div class="logo-text"><span>Adir Enterprises</span><span>Building the Future</span></div>
   </a>
   <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
-  <a href="contact.html" class="nav-cta">Get a Quote</a>
 </nav>
 
-<section id="contact">
-  <h2 class="section-title">Start Your Project</h2>
-  <form>
-    <div class="form-group">
-      <label>Full Name</label>
-      <input type="text" placeholder="Your Name" required>
+<div class="content">
+    <h1>Connect with Us</h1>
+    <p>Let's plan your upcoming modern structural developments.</p>
+    <div class="contact-info">
+        <strong>📍 Location:</strong> Chennai, Tamil Nadu, India<br>
+        <strong>✉️ Email:</strong> contact@adirenterprises.com<br>
+        <strong>📞 Phone:</strong> +91 XXXXX XXXXX
     </div>
-    <div class="form-group">
-      <label>Email Address</label>
-      <input type="email" placeholder="name@email.com" required>
-    </div>
-    <div class="form-group">
-      <label>Message Details</label>
-      <textarea rows="5" placeholder="Describe your site space details..."></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Send Message</button>
-  </form>
-</section>
+</div>
 
 </body>
 </html>
