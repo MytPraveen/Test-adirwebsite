@@ -94,10 +94,10 @@
   /* ABOUT */
   #about { padding: 8rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
   .about-visual { position: relative; height: 560px; }
-  .about-img-main { position: absolute; top: 0; left: 0; width: 75%; height: 80%; background: var(--navy-light); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .about-img-main svg { width: 80px; height: 80px; }
-  .about-img-accent { position: absolute; bottom: 0; right: 0; width: 55%; height: 50%; background: var(--navy-mid); border: 3px solid var(--navy); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .about-img-accent svg { width: 50px; height: 50px; }
+  .about-img-main { position: absolute; top: 0; left: 0; width: 75%; height: 80%; background: var(--navy-light); overflow: hidden; }
+  .about-img-main img { width: 100%; height: 100%; object-fit: cover; }
+  .about-img-accent { position: absolute; bottom: 0; right: 0; width: 55%; height: 50%; background: var(--navy-mid); border: 3px solid var(--navy); overflow: hidden; }
+  .about-img-accent img { width: 100%; height: 100%; object-fit: cover; }
   .about-badge { position: absolute; top: 55%; left: 55%; background: var(--gold); padding: 1.5rem 2rem; z-index: 3; text-align: center; }
   .about-badge .num { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 800; color: var(--navy); line-height: 1; }
   .about-badge .label { font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--navy-light); font-weight: 600; }
@@ -302,6 +302,7 @@
     </div>
     <h1 class="hero-title">
       We Turn Your<br>
+      We Turn Your<br>
       <em>Dream Home</em><br>
       Into Reality
     </h1>
@@ -352,11 +353,11 @@
 
 <section id="about">
   <div class="about-visual reveal">
-    <div class="about-img-main proj-1">
-      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="0.5"><path d="M3 21h18M5 21V10l7-7 7 7v11"/></svg>
+    <div class="about-img-main">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Heavy structural construction crane site">
     </div>
-    <div class="about-img-accent proj-2">
-      <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.25)" stroke-width="0.5"><rect x="2" y="3" width="20" height="14"/><path d="M8 21h8M12 17v4"/></svg>
+    <div class="about-img-accent">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Civil engineering blueprint and safety equipment">
     </div>
     <div class="about-badge">
       <span class="num">25+</span>
@@ -469,331 +470,31 @@
       <img class="service-card-bg-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Marketing Background">
       <span class="service-num">08</span>
       <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 20h2M12 4h2M4 12h16"/></svg>
       </div>
-      <h3 class="service-title">Marketing</h3>
-      <p class="service-desc">Strategic property marketing — if ever a negative word of mouth spreads, you know your company is in deep trouble. We protect and build your brand reputation.</p>
+      <h3 class="service-title">Business Strategy</h3>
+      <p class="service-desc">Our management consultants work closely alongside corporate leaders to structure growth blueprints and expansion methodologies.</p>
     </div>
+
   </div>
 </section>
-
-<div class="stats-banner reveal">
-  <div class="stat-item">
-    <span class="num">78%</span>
-    <span class="lbl">Projects Done</span>
-  </div>
-  <div class="stat-item">
-    <span class="num">90%</span>
-    <span class="lbl">Happy Clients</span>
-  </div>
-  <div class="stat-item">
-    <span class="num">62%</span>
-    <span class="lbl">Completed Co.</span>
-  </div>
-  <div class="stat-item">
-    <span class="num">85%</span>
-    <span class="lbl">Country Cover</span>
-  </div>
-</div>
-
-<section id="projects">
-  <div class="projects-header reveal">
-    <div class="section-eyebrow" style="justify-content:center;"><span>Portfolio</span></div>
-    <h2 class="section-title" style="text-align:center;">Featured <em>Projects</em></h2>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card reveal featured">
-      <div class="proj-bg proj-1"></div>
-      <div class="project-overlay">
-        <div class="project-info">
-          <div class="tag">Residential</div>
-          <h3>Premium Villa Complex</h3>
-          <p>Avadi, Chennai</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="proj-bg proj-2"></div>
-      <div class="project-overlay">
-        <div class="project-info">
-          <div class="tag">Commercial</div>
-          <h3>Hazel Towers</h3>
-          <p>Tamil Nadu</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="proj-bg proj-3"></div>
-      <div class="project-overlay">
-        <div class="project-info">
-          <div class="tag">Residential</div>
-          <h3>Puravankara Heights</h3>
-          <p>Chennai</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="proj-bg proj-4"></div>
-      <div class="project-overlay">
-        <div class="project-info">
-          <div class="tag">Industrial</div>
-          <h3>Logistics Warehouse</h3>
-          <p>Sriperumbudur</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="proj-bg proj-5"></div>
-      <div class="project-overlay">
-        <div class="project-info">
-          <div class="tag">Commercial</div>
-          <h3>Corporate Office Plaza</h3>
-          <p>OMR, Chennai</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="testimonials">
-  <div class="testimonials-header reveal">
-    <div class="section-eyebrow" style="justify-content:center;"><span>Testimonials</span></div>
-    <h2 class="section-title" style="text-align:center;">What Our <em>Clients</em> Say</h2>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testi-card reveal">
-      <p class="testi-text">Adir Enterprises delivered our dream villa perfectly on budget and exactly on time. Their approval support was flawless.</p>
-      <div class="testi-author">
-        <div class="testi-avatar">RK</div>
-        <div>
-          <div class="testi-name">Rajesh Kumar</div>
-          <div class="testi-city">Anna Nagar, Chennai</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card reveal">
-      <p class="testi-text">Extremely professional execution on our commercial warehouse project. Strong project management value throughout.</p>
-      <div class="testi-author">
-        <div class="testi-avatar">AM</div>
-        <div>
-          <div class="testi-name">Arun Mazhavarayar</div>
-          <div class="testi-city">Ambattur, Chennai</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="news">
-  <div class="news-header reveal">
-    <div class="section-eyebrow" style="justify-content:center;"><span>Insights</span></div>
-    <h2 class="section-title" style="text-align:center;">Latest <em>News</em></h2>
-  </div>
-  <div class="news-grid">
-    <div class="news-card reveal">
-      <div class="news-img proj-1">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1"><path d="M12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9l9-7z"/></svg>
-      </div>
-      <div class="news-body">
-        <span class="news-cat">Trends</span>
-        <h3 class="news-title">Choosing Right Materials for Dream Homes</h3>
-        <p class="news-excerpt">An essential structural layout guide to selecting premium yet sustainable construction elements in Tamil Nadu.</p>
-        <div class="news-meta">By <span>Admin</span> • June 2026</div>
-      </div>
-    </div>
-    <div class="news-card reveal">
-      <div class="news-img proj-2">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"/></svg>
-      </div>
-      <div class="news-body">
-        <span class="news-cat">Approvals</span>
-        <h3 class="news-title">Navigating CMDA & DTCP Processes</h3>
-        <p class="news-excerpt">Understanding critical documentation frameworks for hassle-free sanction permits and Patta registration steps.</p>
-        <div class="news-meta">By <span>Legal Expert</span> • May 2026</div>
-      </div>
-    </div>
-    <div class="news-card reveal">
-      <div class="news-img proj-3">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1"><path d="M2 22h20M4 22V4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18"/></svg>
-      </div>
-      <div class="news-body">
-        <span class="news-cat">Design</span>
-        <h3 class="news-title">Modern Luxury 3D Spatial Walkthroughs</h3>
-        <p class="news-excerpt">How photorealistic elevation tools help eliminate structural budgeting reworks before building site execution.</p>
-        <div class="news-meta">By <span>Architecture Team</span> • April 2026</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="clients-strip reveal">
-  <div class="clients-label">Trusted Partners</div>
-  <div class="clients-logos">
-    <span class="client-logo">Oasis IT</span>
-    <span class="client-logo">UltraTech</span>
-    <span class="client-logo">Somany</span>
-    <span class="client-logo">Asian Paints</span>
-  </div>
-</div>
-
-<section id="contact">
-  <div class="contact-info reveal">
-    <div>
-      <div class="section-eyebrow"><span>Get In Touch</span></div>
-      <h2 class="section-title">Let's Build <em>Together</em></h2>
-      <p class="section-body">Reach out to our engineering office today for specialized quotations, structural roadmap estimates, or site visit assessments.</p>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </div>
-      <div>
-        <div class="c-label">Call Our Office</div>
-        <div class="c-value">+91 94440 XXXXX / +91 44 2638 XXXX</div>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-      </div>
-      <div>
-        <div class="c-label">Email Communications</div>
-        <div class="c-value">contact@adirenterprises.com / estimates@adir.in</div>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      </div>
-      <div>
-        <div class="c-label">Headquarters Location</div>
-        <div class="c-value">No. 12, High School Road, Avadi, Chennai - 600054, Tamil Nadu, India</div>
-      </div>
-    </div>
-    <div class="map-embed">
-      <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 0.8rem; letter-spacing: 1px;">MAP ENGINE CONTAINER</div>
-    </div>
-  </div>
-  
-  <div class="contact-form reveal">
-    <div class="form-row">
-      <div class="form-group">
-        <label>Full Name</label>
-        <input type="text" placeholder="John Doe">
-      </div>
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" placeholder="+91 98765 43210">
-      </div>
-    </div>
-    <div class="form-group">
-      <label>Email Address</label>
-      <input type="email" placeholder="john@example.com">
-    </div>
-    <div class="form-group">
-      <label>Requested Core Service</label>
-      <select>
-        <option>Property Consulting</option>
-        <option>Civil Construction</option>
-        <option>Interior Styling</option>
-        <option>Real Estate Assets</option>
-        <option>Industrial Projects</option>
-        <option>Project Management</option>
-        <option>Renovations</option>
-        <option>Strategic Marketing</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Project Overview Details</label>
-      <textarea placeholder="Describe your structural timeline, plot area parameters, or requirements..."></textarea>
-    </div>
-    <button class="submit-btn">Send Specification Inquiry</button>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-grid">
-    <div class="footer-about">
-      <a href="#home" class="logo" style="margin-bottom:1.5rem;">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-7 7 7v11M9 21v-6h6v6"/></svg>
-        </div>
-        <div class="logo-text">
-          <span>Adir Enterprises</span>
-        </div>
-      </a>
-      <p>Chennai's premier high-end residential engineering contractor and civil layout developers since 2001.</p>
-      <div class="footer-hours">
-        <strong>Office Hours</strong>
-        Monday - Saturday: 9:00 AM - 6:30 PM
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Company Info</h4>
-      <ul>
-        <li><a href="#about">Our Core Story</a></li>
-        <li><a href="#services">Services Grid</a></li>
-        <li><a href="#projects">Portfolio Gallery</a></li>
-        <li><a href="#contact">Contact Desk</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>What We Do</h4>
-      <ul>
-        <li><a href="#services">Property Valuation</a></li>
-        <li><a href="#services">Home Construction</a></li>
-        <li><a href="#services">Interior Design</a></li>
-        <li><a href="#services">CMDA Sanctions</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Support Desk</h4>
-      <ul>
-        <li><a href="#contact">Request Estimate</a></li>
-        <li><a href="#contact">Site Audits</a></li>
-        <li><a href="#contact">Legal Screening</a></li>
-        <li><a href="#contact">Privacy Plan</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-copy">
-      &copy; 2026 <strong>Adir Enterprises</strong>. Crafted with Precision Architecture.
-    </div>
-    <div class="footer-socials">
-      <a href="#">FB</a>
-      <a href="#">LN</a>
-      <a href="#">IG</a>
-      <a href="#">YT</a>
-    </div>
-  </div>
-</footer>
 
 <script>
-  // Simple scroll interaction handler for Navigation changes
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
-
-  // Basic IntersectionObserver script to handle scroll reveal points seamlessly
-  const revealElements = document.querySelectorAll('.reveal');
-  const options = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-  
-  const observer = new IntersectionObserver((entries, observer) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
       }
     });
-  }, options);
+  }, { threshold: 0.1 });
 
-  revealElements.forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
 </script>
 
 </body>
