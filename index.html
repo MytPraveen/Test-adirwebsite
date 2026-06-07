@@ -143,7 +143,12 @@
   .section-eyebrow span { font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); font-weight: 600; }
   .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 400; line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; }
   .section-title em { font-style: italic; color: var(--gold); }
-  .section-body { color: var(--grey); line-height: 1.9; font-weight: 300; font-size: 1rem; margin-bottom: 1.5rem; }
+  .section-body {
+  color: #475569;
+  line-height: 1.9;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
 
   /* ABOUT */
   #about { padding: 8rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
@@ -166,7 +171,12 @@
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: rgba(200,169,110,0.08); }
   
   /* Modern Luxury Image Enhancements inside Cards */
-  .service-card { background: var(--navy-mid); padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: all 0.4s; cursor: default; border: 1px solid transparent; z-index: 1; }
+  .service-card {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
   .service-card:hover { background: var(--navy-light); border-color: rgba(200,169,110,0.3); transform: translateY(-4px); }
   .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.4s; z-index: 3; }
   .service-card:hover::before { width: 100%; }
@@ -179,8 +189,17 @@
   .service-card:hover .service-icon { background: var(--gold); border-color: var(--gold); }
   .service-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
   .service-card:hover .service-icon svg { stroke: var(--navy); }
-  .service-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; color: var(--white); text-transform: uppercase; margin-bottom: 1rem; position: relative; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-  .service-desc { color: var(--white); opacity: 0.85; font-size: 0.9rem; line-height: 1.7; font-weight: 300; position: relative; z-index: 2; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+  .service-title {
+  color: #0F172A;
+  text-shadow: none;
+}
+  .service-desc {
+  color: #475569;
+  opacity: 1;
+  text-shadow: none;
+  font-size: 1rem;
+  line-height: 1.8;
+}
   
   /* Desktop Span Layouts */
   @media (min-width: 901px) {
@@ -269,13 +288,13 @@
   .contact-icon { width: 44px; height: 44px; flex-shrink: 0; border: 1px solid rgba(200,169,110,0.3); display: flex; align-items: center; justify-content: center; }
   .contact-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
   .contact-item .c-label { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
-  .contact-item .c-value { color: var(--white); font-size: 0.95rem; line-height: 1.7; }
+  .contact-item .c-value { color: var(--white); font-size: 1.05rem; line-height: 1.8; }
   .map-embed { width: 100%; height: 400px; margin: 0; border-top: 1px solid rgba(200,169,110,0.15); border-bottom: 1px solid rgba(200,169,110,0.15); }
   .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
   .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-  .form-group label { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); font-weight: 500; }
-  .form-group input, .form-group textarea, .form-group select { background: rgba(255,255,255,0.03); border: 1px solid rgba(200,169,110,0.2); padding: 0.9rem 1.2rem; color: var(--white); font-family: 'Barlow', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.3s; appearance: none; -webkit-appearance: none; }
+  .form-group label { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #777; font-weight: 600; }
+  .form-group input, .form-group textarea, .form-group select { background: rgba(255,255,255,0.03); border: 1px solid rgba(200,169,110,0.2); padding: 0.9rem 1.2rem; color: var(--white); font-family: 'Barlow', sans-serif; font-size: 1rem; outline: none; transition: border-color 0.3s; appearance: none; -webkit-appearance: none; }
   .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
   .form-group textarea { resize: vertical; min-height: 120px; }
   .form-group select option { background: var(--navy); }
