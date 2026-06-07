@@ -173,13 +173,23 @@
 /* Modern Luxury Image Enhancements inside Cards */
 
 .service-card {
+  position: relative;
+  overflow: hidden;
+
   background: white;
   padding: 3rem 2.5rem;
   border-radius: 16px;
+
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
 }
-
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.90);
+  z-index: 1;
+}
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
@@ -210,15 +220,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.18;
+
+  opacity: 0.06;
+
   transition: transform 0.6s ease, opacity 0.4s ease;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
 }
 
 .service-card:hover .service-card-bg-img {
   transform: scale(1.04);
-  opacity: 0.18;
+  opacity: 0.10;
 }
 
 /* Service Number */
@@ -277,6 +289,8 @@
   font-size: 1.7rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 2;
 }
 
 /* Description */
@@ -287,6 +301,8 @@
   text-shadow: none;
   font-size: 1rem;
   line-height: 1.8;
+  position: relative;
+  z-index: 2;
 }
   /* Desktop Span Layouts */
   @media (min-width: 901px) {
