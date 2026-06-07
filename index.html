@@ -177,7 +177,10 @@
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
-  .service-card:hover { background: var(--navy-light); border-color: rgba(200,169,110,0.3); transform: translateY(-4px); }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
   .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.4s; z-index: 3; }
   .service-card:hover::before { width: 100%; }
   
