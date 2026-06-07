@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us – Adir Enterprises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --apple-blue: #0071e3; --apple-bright: #00ca4e; --navy: #0A1628; --navy-mid: #142236; --white: #ffffff; --grey: #a1a1a6; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--navy); color: var(--white); font-family: 'Barlow', sans-serif; padding-top: 100px; }
+  
+  /* NAV COMPONENT */
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(10,22,40,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,113,227,0.2); }
+  .logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+  .logo-icon { width: 42px; height: 42px; background: var(--apple-blue); clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 30%); display: flex; align-items: center; justify-content: center; }
+  .logo-icon svg { width: 22px; height: 22px; fill: var(--white); }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo-text span:first-child { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--white); letter-spacing: 2px; }
+  .logo-text span:last-child { font-size: 0.65rem; color: var(--apple-bright); letter-spacing: 3px; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--grey); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+  .nav-links a.active { color: var(--apple-blue); font-weight: 700; }
+  .nav-cta { background: var(--apple-blue); border: none; color: var(--white); padding: 0.6rem 1.6rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; text-decoration: none; border-radius: 20px; }
+
+  #about { padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: calc(100vh - 100px); }
+  .about-img-placeholder { background: var(--navy-mid); border: 2px dashed var(--apple-blue); border-radius: 12px; height: 450px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .about-img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+  .section-title { font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: -0.5px; }
+  .section-title em { font-style: normal; color: var(--apple-blue); }
+  .section-body { color: var(--grey); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.5rem; }
+  
+  @media (max-width: 900px) { nav { padding: 1rem 2rem; } .nav-links, .nav-cta { display: none; } #about { grid-template-columns: 1fr; padding: 2rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-7 7 7v11M9 21v-6h6v6"/></svg></div>
+    <div class="logo-text"><span>Adir Enterprises</span><span>Building the Future</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get a Quote</a>
+</nav>
+
+<section id="about">
+  <div class="about-img-placeholder">
+    <!-- IMAGES ASSIGNMENT PLACEHOLDER -->
+    <img src="about-team.jpg" alt="Our Professional Team Workspace">
+  </div>
+  <div>
+    <h2 class="section-title">We Believe <em>Great Architecture</em> Powers Performance</h2>
+    <p class="section-body">As one of the best construction companies in Chennai, we offer industrial planning, architectural blueprints, structural engineering, and corporate asset creation at highly competitive packages.</p>
+    <p class="section-body">We intentionally construct robust structures today to secure tomorrow's real estate functionality. The future of execution is smart, resilient, and high-performing.</p>
+  </div>
+</section>
+
+</body>
+</html>
