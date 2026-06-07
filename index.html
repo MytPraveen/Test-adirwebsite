@@ -179,7 +179,16 @@
   /* TESTIMONIALS */
   #testimonials { padding: 8rem 4rem; background: var(--navy-mid); }
   .testimonials-header { text-align: center; margin-bottom: 4rem; }
-  .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .testimonials-grid{
+    display:flex;
+    gap:30px;
+    width:max-content;
+    animation:testimonialScroll 25s linear infinite;
+}
+
+#testimonials{
+    overflow:hidden;
+}
   .testi-card {
     background: var(--navy-light); border: 1px solid rgba(200,169,110,0.12);
     padding: 3rem; position: relative; transition: border-color 0.3s;
@@ -255,6 +264,15 @@
   /* ANIMATIONS */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes testimonialScroll{
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+}
   
   /* REVEAL ON SCROLL SYSTEM */
   .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
@@ -613,6 +631,34 @@
           <div class="testi-city">Ambattur, Chennai</div>
         </div>
       </div>
+      <div class="testi-card reveal">
+  <p class="testi-text">
+    Adir Enterprises handled our home construction professionally from planning to handover. Highly recommended.
+  </p>
+
+  <div class="testi-author">
+    <div class="testi-avatar">VK</div>
+
+    <div>
+      <div class="testi-name">Vignesh Kumar</div>
+      <div class="testi-city">Porur, Chennai</div>
+    </div>
+  </div>
+</div>
+      <div class="testi-card reveal">
+  <p class="testi-text">
+    Excellent quality work, transparent pricing and timely completion. The entire process was smooth.
+  </p>
+
+  <div class="testi-author">
+    <div class="testi-avatar">SR</div>
+
+    <div>
+      <div class="testi-name">Srinivasan</div>
+      <div class="testi-city">Avadi, Chennai</div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </section>
