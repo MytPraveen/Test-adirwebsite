@@ -180,6 +180,14 @@
     border-radius: 16px;
     backdrop-filter: blur(2px);
 }
+.service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.55);
+    z-index: 1;
+    pointer-events: none;
+}
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
