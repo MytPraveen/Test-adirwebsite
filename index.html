@@ -110,17 +110,23 @@
   .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
   .services-header .section-title { margin-bottom: 0; max-width: 500px; }
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: rgba(200,169,110,0.08); }
-  .service-card { background: var(--navy-mid); padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: all 0.4s; cursor: default; border: 1px solid transparent; }
+  
+  /* Modern Luxury Image Enhancements inside Cards */
+  .service-card { background: var(--navy-mid); padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: all 0.4s; cursor: default; border: 1px solid transparent; z-index: 1; }
   .service-card:hover { background: var(--navy-light); border-color: rgba(200,169,110,0.3); transform: translateY(-4px); }
-  .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.4s; }
+  .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.4s; z-index: 3; }
   .service-card:hover::before { width: 100%; }
-  .service-num { font-family: 'Barlow Condensed', sans-serif; font-size: 4rem; font-weight: 800; color: rgba(200,169,110,0.07); line-height: 1; margin-bottom: 1.5rem; display: block; }
-  .service-icon { width: 50px; height: 50px; margin-bottom: 1.5rem; background: rgba(200,169,110,0.1); border: 1px solid rgba(200,169,110,0.3); display: flex; align-items: center; justify-content: center; transition: all 0.4s; }
+  
+  .service-card-bg-img { position: absolute; top: 0; right: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; transition: transform 0.6s ease, opacity 0.4s ease; z-index: -1; pointer-events: none; }
+  .service-card:hover .service-card-bg-img { transform: scale(1.08); opacity: 0.25; }
+  
+  .service-num { font-family: 'Barlow Condensed', sans-serif; font-size: 4rem; font-weight: 800; color: rgba(200,169,110,0.15); line-height: 1; margin-bottom: 1.5rem; display: block; position: relative; z-index: 2; }
+  .service-icon { width: 50px; height: 50px; margin-bottom: 1.5rem; background: rgba(10,22,40,0.6); border: 1px solid rgba(200,169,110,0.3); display: flex; align-items: center; justify-content: center; transition: all 0.4s; position: relative; z-index: 2; backdrop-filter: blur(4px); }
   .service-card:hover .service-icon { background: var(--gold); border-color: var(--gold); }
   .service-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
   .service-card:hover .service-icon svg { stroke: var(--navy); }
-  .service-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; color: var(--white); text-transform: uppercase; margin-bottom: 1rem; }
-  .service-desc { color: var(--grey); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
+  .service-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; color: var(--white); text-transform: uppercase; margin-bottom: 1rem; position: relative; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+  .service-desc { color: var(--white); opacity: 0.85; font-size: 0.9rem; line-height: 1.7; font-weight: 300; position: relative; z-index: 2; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
   
   /* Desktop Span Layouts */
   @media (min-width: 901px) {
@@ -388,7 +394,9 @@
     <a href="#contact" class="btn-ghost" style="color:var(--grey);">Discuss Your Project</a>
   </div>
   <div class="services-grid">
+    
     <div class="service-card reveal">
+      <img class="service-card-bg-img" src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQtFMvXbKfRlocvHrJG0bR0HGtcjcAhFJ8mwsM5j7PgebsXNsbegbj1yFdmFmO8rbhIcgPjIqgym5DW-mM" alt="Property Consulting Background">
       <span class="service-num">01</span>
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-7 7 7v11"/></svg>
@@ -396,7 +404,9 @@
       <h3 class="service-title">Property Consulting</h3>
       <p class="service-desc">World-class real estate services powered by entrepreneurial spirit. We guide clients to the right property investment with expert advice.</p>
     </div>
+    
     <div class="service-card reveal">
+      <img class="service-card-bg-img" src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR1qXG9JcwJgDKYzAa96sEuvc9JZ-7o2YixaN_rU-hG3ep7bvmNDsTeBJy-y-p75CqQCrVV2_WxZ348llA" alt="Construction Background">
       <span class="service-num">02</span>
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
@@ -404,7 +414,9 @@
       <h3 class="service-title">Construction Company</h3>
       <p class="service-desc">A premier civil engineering construction company in India, involved in execution of residential, commercial and industrial projects.</p>
     </div>
+    
     <div class="service-card reveal">
+      <img class="service-card-bg-img" src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQdhGLcrKmeVzN6MxJLB3wKyLcroBSfde6kRRLiqLOvmsRABaNRyS6RA9aNf9Dtg6bpG5MTBdmJJxdl5eA" alt="Interior Works Background">
       <span class="service-num">03</span>
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M12 22a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M7 12h10M12 7v10"/></svg>
@@ -412,7 +424,9 @@
       <h3 class="service-title">Interior Works</h3>
       <p class="service-desc">Interior design is the concept through which you can decorate your home, hide its flaws, and reflect your personal style beautifully.</p>
     </div>
+    
     <div class="service-card reveal">
+      <img class="service-card-bg-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Real Estate Background">
       <span class="service-num">04</span>
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V8l8-6 8 6v12"/><rect x="8" y="14" width="8" height="6"/></svg>
@@ -420,7 +434,9 @@
       <h3 class="service-title">Real Estate</h3>
       <p class="service-desc">Real estate portfolio management — since many clients have multiple location requirements, we handle end-to-end property needs.</p>
     </div>
+    
     <div class="service-card reveal">
+      <img class="service-card-bg-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Industrial Construction Background">
       <span class="service-num">05</span>
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
@@ -428,7 +444,9 @@
       <h3 class="service-title">Industrial Construction</h3>
       <p class="service-desc">Industrial planning, architecture design, construction, and engineering services for industrial buildings, including warehouses across Tamil Nadu.</p>
     </div>
+    
     <div class="service-card reveal">
+      <img class="service-card-bg-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Project Management Background">
       <span class="service-num">06</span>
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
@@ -436,7 +454,9 @@
       <h3 class="service-title">Project Management</h3>
       <p class="service-desc">A well-defined approach to project execution and strong project management values — on time, on budget, no exceptions.</p>
     </div>
+    
     <div class="service-card reveal span-1">
+      <img class="service-card-bg-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Renovation Background">
       <span class="service-num">07</span>
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
@@ -444,7 +464,9 @@
       <h3 class="service-title">Renovation</h3>
       <p class="service-desc">When you alter the construction of a structure — extending the footprint, adding a story, back yard, or elements — we handle it all.</p>
     </div>
+    
     <div class="service-card reveal span-2">
+      <img class="service-card-bg-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Marketing Background">
       <span class="service-num">08</span>
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -515,8 +537,8 @@
       <div class="project-overlay">
         <div class="project-info">
           <div class="tag">Industrial</div>
-          <h3>Mahindra World City</h3>
-          <p>Kancheepuram</p>
+          <h3>Logistics Warehouse</h3>
+          <p>Sriperumbudur</p>
         </div>
       </div>
     </div>
@@ -524,9 +546,9 @@
       <div class="proj-bg proj-5"></div>
       <div class="project-overlay">
         <div class="project-info">
-          <div class="tag">Mixed Use</div>
-          <h3>VGK Lifestyle Hub</h3>
-          <p>Tambaram, Chennai</p>
+          <div class="tag">Commercial</div>
+          <h3>Corporate Office Plaza</h3>
+          <p>OMR, Chennai</p>
         </div>
       </div>
     </div>
@@ -540,9 +562,9 @@
   </div>
   <div class="testimonials-grid">
     <div class="testi-card reveal">
-      <p class="testi-text">Adir Enterprises constructed our commercial office spaces flawlessly. Their project tracking metrics kept everything visible, and they hit our deadlines down to the single day.</p>
+      <p class="testi-text">Adir Enterprises delivered our dream villa perfectly on budget and exactly on time. Their approval support was flawless.</p>
       <div class="testi-author">
-        <div class="testi-avatar">R</div>
+        <div class="testi-avatar">RK</div>
         <div>
           <div class="testi-name">Rajesh Kumar</div>
           <div class="testi-city">Anna Nagar, Chennai</div>
@@ -550,40 +572,84 @@
       </div>
     </div>
     <div class="testi-card reveal">
-      <p class="testi-text">Their interior styling execution transformed our home. From getting approval sanctions to custom layout modifications, the entire team was exceptionally supportive.</p>
+      <p class="testi-text">Extremely professional execution on our commercial warehouse project. Strong project management value throughout.</p>
       <div class="testi-author">
-        <div class="testi-avatar">P</div>
+        <div class="testi-avatar">AM</div>
         <div>
-          <div class="testi-name">Priya Sundar</div>
-          <div class="testi-city">Adyar, Chennai</div>
+          <div class="testi-name">Arun Mazhavarayar</div>
+          <div class="testi-city">Ambattur, Chennai</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section id="news">
+  <div class="news-header reveal">
+    <div class="section-eyebrow" style="justify-content:center;"><span>Insights</span></div>
+    <h2 class="section-title" style="text-align:center;">Latest <em>News</em></h2>
+  </div>
+  <div class="news-grid">
+    <div class="news-card reveal">
+      <div class="news-img proj-1">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1"><path d="M12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9l9-7z"/></svg>
+      </div>
+      <div class="news-body">
+        <span class="news-cat">Trends</span>
+        <h3 class="news-title">Choosing Right Materials for Dream Homes</h3>
+        <p class="news-excerpt">An essential structural layout guide to selecting premium yet sustainable construction elements in Tamil Nadu.</p>
+        <div class="news-meta">By <span>Admin</span> • June 2026</div>
+      </div>
+    </div>
+    <div class="news-card reveal">
+      <div class="news-img proj-2">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <div class="news-body">
+        <span class="news-cat">Approvals</span>
+        <h3 class="news-title">Navigating CMDA & DTCP Processes</h3>
+        <p class="news-excerpt">Understanding critical documentation frameworks for hassle-free sanction permits and Patta registration steps.</p>
+        <div class="news-meta">By <span>Legal Expert</span> • May 2026</div>
+      </div>
+    </div>
+    <div class="news-card reveal">
+      <div class="news-img proj-3">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1"><path d="M2 22h20M4 22V4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18"/></svg>
+      </div>
+      <div class="news-body">
+        <span class="news-cat">Design</span>
+        <h3 class="news-title">Modern Luxury 3D Spatial Walkthroughs</h3>
+        <p class="news-excerpt">How photorealistic elevation tools help eliminate structural budgeting reworks before building site execution.</p>
+        <div class="news-meta">By <span>Architecture Team</span> • April 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="clients-strip reveal">
+  <div class="clients-label">Trusted Partners</div>
+  <div class="clients-logos">
+    <span class="client-logo">Oasis IT</span>
+    <span class="client-logo">UltraTech</span>
+    <span class="client-logo">Somany</span>
+    <span class="client-logo">Asian Paints</span>
+  </div>
+</div>
+
 <section id="contact">
   <div class="contact-info reveal">
     <div>
-      <div class="section-eyebrow"><span>Contact Details</span></div>
-      <h2 class="section-title">Let's <em>Connect</em></h2>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      </div>
-      <div>
-        <div class="c-label">Main Office</div>
-        <div class="c-value">Adir Enterprises, Poonamallee High Road,<br>Kilpauk, Chennai - 600010</div>
-      </div>
+      <div class="section-eyebrow"><span>Get In Touch</span></div>
+      <h2 class="section-title">Let's Build <em>Together</em></h2>
+      <p class="section-body">Reach out to our engineering office today for specialized quotations, structural roadmap estimates, or site visit assessments.</p>
     </div>
     <div class="contact-item">
       <div class="contact-icon">
         <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </div>
       <div>
-        <div class="c-label">Call Inquiry</div>
-        <div class="c-value">+91 44 2XXX XXXX<br>+91 98XXX XXXXX</div>
+        <div class="c-label">Call Our Office</div>
+        <div class="c-value">+91 94440 XXXXX / +91 44 2638 XXXX</div>
       </div>
     </div>
     <div class="contact-item">
@@ -592,51 +658,63 @@
       </div>
       <div>
         <div class="c-label">Email Communications</div>
-        <div class="c-value">info@adirenterprises.com<br>support@adirenterprises.com</div>
+        <div class="c-value">contact@adirenterprises.com / estimates@adir.in</div>
       </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <div class="c-label">Headquarters Location</div>
+        <div class="c-value">No. 12, High School Road, Avadi, Chennai - 600054, Tamil Nadu, India</div>
+      </div>
+    </div>
+    <div class="map-embed">
+      <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 0.8rem; letter-spacing: 1px;">MAP ENGINE CONTAINER</div>
     </div>
   </div>
   
-  <form class="contact-form reveal">
+  <div class="contact-form reveal">
     <div class="form-row">
       <div class="form-group">
         <label>Full Name</label>
-        <input type="text" placeholder="John Doe" required>
+        <input type="text" placeholder="John Doe">
       </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="john@example.com" required>
-      </div>
-    </div>
-    <div class="form-row">
       <div class="form-group">
         <label>Phone Number</label>
-        <input type="tel" placeholder="+91 98765 43210" required>
-      </div>
-      <div class="form-group">
-        <label>Project Requirement</label>
-        <select required>
-          <option value="" disabled selected>Select service...</option>
-          <option value="consulting">Property Consulting</option>
-          <option value="construction">Civil Construction</option>
-          <option value="interior">Interior Works</option>
-          <option value="industrial">Industrial Facilities</option>
-          <option value="renovation">Renovation</option>
-        </select>
+        <input type="tel" placeholder="+91 98765 43210">
       </div>
     </div>
     <div class="form-group">
-      <label>Project Brief</label>
-      <textarea placeholder="Tell us about your land area, location, or construction needs..."></textarea>
+      <label>Email Address</label>
+      <input type="email" placeholder="john@example.com">
     </div>
-    <button type="submit" class="submit-btn">Submit Request</button>
-  </form>
+    <div class="form-group">
+      <label>Requested Core Service</label>
+      <select>
+        <option>Property Consulting</option>
+        <option>Civil Construction</option>
+        <option>Interior Styling</option>
+        <option>Real Estate Assets</option>
+        <option>Industrial Projects</option>
+        <option>Project Management</option>
+        <option>Renovations</option>
+        <option>Strategic Marketing</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Project Overview Details</label>
+      <textarea placeholder="Describe your structural timeline, plot area parameters, or requirements..."></textarea>
+    </div>
+    <button class="submit-btn">Send Specification Inquiry</button>
+  </div>
 </section>
 
 <footer>
   <div class="footer-grid">
-    <div class="footer-col footer-about">
-      <a href="#home" class="logo">
+    <div class="footer-about">
+      <a href="#home" class="logo" style="margin-bottom:1.5rem;">
         <div class="logo-icon">
           <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-7 7 7v11M9 21v-6h6v6"/></svg>
         </div>
@@ -644,77 +722,79 @@
           <span>Adir Enterprises</span>
         </div>
       </a>
-      <p>Delivering high-performance structural systems, custom architectural solutions, and residential spaces across Chennai and Tamil Nadu.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Our Services</h4>
-      <ul>
-        <li><a href="#services">Civil Architecture</a></li>
-        <li><a href="#services">Industrial Construction</a></li>
-        <li><a href="#services">Interior Execution</a></li>
-        <li><a href="#services">Property Consulting</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="#about">Our Story</a></li>
-        <li><a href="#projects">Project Gallery</a></li>
-        <li><a href="#testimonials">Happy Clients</a></li>
-        <li><a href="#contact">Get a Quote</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
+      <p>Chennai's premier high-end residential engineering contractor and civil layout developers since 2001.</p>
       <div class="footer-hours">
-        <strong>Working Hours</strong>
-        Monday - Saturday<br>
-        09:00 AM - 06:30 PM<br><br>
-        <strong>Support Desk</strong>
-        Available via email 24/7.
+        <strong>Office Hours</strong>
+        Monday - Saturday: 9:00 AM - 6:30 PM
       </div>
+    </div>
+    <div class="footer-col">
+      <h4>Company Info</h4>
+      <ul>
+        <li><a href="#about">Our Core Story</a></li>
+        <li><a href="#services">Services Grid</a></li>
+        <li><a href="#projects">Portfolio Gallery</a></li>
+        <li><a href="#contact">Contact Desk</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>What We Do</h4>
+      <ul>
+        <li><a href="#services">Property Valuation</a></li>
+        <li><a href="#services">Home Construction</a></li>
+        <li><a href="#services">Interior Design</a></li>
+        <li><a href="#services">CMDA Sanctions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support Desk</h4>
+      <ul>
+        <li><a href="#contact">Request Estimate</a></li>
+        <li><a href="#contact">Site Audits</a></li>
+        <li><a href="#contact">Legal Screening</a></li>
+        <li><a href="#contact">Privacy Plan</a></li>
+      </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">
-      &copy; 2026 <strong>Adir Enterprises</strong>. All Rights Reserved.
+      &copy; 2026 <strong>Adir Enterprises</strong>. Crafted with Precision Architecture.
     </div>
     <div class="footer-socials">
       <a href="#">FB</a>
       <a href="#">LN</a>
-      <a href="#">TW</a>
       <a href="#">IG</a>
+      <a href="#">YT</a>
     </div>
   </div>
 </footer>
 
 <script>
-  // Sticky Navbar Padding Toggler
-  const navbar = document.getElementById('navbar');
+  // Simple scroll interaction handler for Navigation changes
   window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
     if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
+      nav.classList.add('scrolled');
     } else {
-      navbar.classList.remove('scrolled');
+      nav.classList.remove('scrolled');
     }
   });
 
-  // Smooth Reveal Animations System
+  // Basic IntersectionObserver script to handle scroll reveal points seamlessly
   const revealElements = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  const options = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // Animates only once
+        observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
-  });
+  }, options);
 
-  revealElements.forEach(element => {
-    revealObserver.observe(element);
-  });
+  revealElements.forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
