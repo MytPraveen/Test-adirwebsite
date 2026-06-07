@@ -33,16 +33,26 @@
     transition: padding 0.3s, background 0.3s;
   }
   nav.scrolled { padding: 0.8rem 4rem; background: rgba(10,22,40,0.98); }
+  /* ── LOGO (CHANGED: green square + orange brand name) ── */
   .logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
   .logo-icon {
-    width: 42px; height: 42px; background: var(--gold);
-    clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 30%);
+    width: 46px; height: 46px;
+    background: #2E7D32;
+    border-radius: 4px;
     display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
   }
-  .logo-icon svg { width: 22px; height: 22px; fill: var(--navy); }
-  .logo-text { display: flex; flex-direction: column; line-height: 1; }
-  .logo-text span:first-child { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: 2px; color: var(--white); }
-  .logo-text span:last-child { font-size: 0.65rem; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; }
+  .logo-icon svg { width: 30px; height: 30px; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .logo-text span:first-child {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.3rem; font-weight: 800; letter-spacing: 2px;
+    color: #E07B20;
+  }
+  .logo-text span:last-child {
+    font-size: 0.62rem; letter-spacing: 3px; color: #5CAA5C;
+    text-transform: uppercase;
+  }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { color: var(--grey); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; transition: color 0.3s; }
   .nav-links a:hover { color: var(--gold); }
